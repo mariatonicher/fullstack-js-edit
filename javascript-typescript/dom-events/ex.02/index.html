@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="lista">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <button id="myBtn" type="button" onclick="addText(this)">Add</button>
+
+    <script>
+      document.getElementById("myBtn").addEventListener(click, addText);
+
+      function addText(id) {
+        const list = document.createElement("li");
+        const node = document.createTextNode("Juice");
+        list.appendChild(node);
+        const element = document.getElementById("lista");
+        element.appendChild(list);
+      }
+    </script>
+  </body>
+</html>

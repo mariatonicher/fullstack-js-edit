@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+<body>
+   <form>
+        <input type="text" id="myInput" oninput="handText(this)"/>
+    </form>
+    
+<div id="my-div"></div>
+  <script>
+   function handText(elem) {
+    const div =document.getElementById("my-div");
+    div.innerHTML = elem.value;
+   }
+        </script>
+</body>
+
+  </body>
+</html>

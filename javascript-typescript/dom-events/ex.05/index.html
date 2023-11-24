@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+<body>
+<div id="changeColor" onmouseover="mOver(this)"  onmouseout="mOut(this)">Muda de cor</div>
+
+  <script>
+    const change = document.getElementById("changeColor").addEventListener("mouseover", mOver);
+    const originColor = document.getElementById("changeColor").addEventListener("mouseout", mOut); 
+
+    function mOver(obj) {
+        document.getElementById("changeColor").style.color = "red";  
+      }
+    function mOut (obj) {
+          document.getElementById("changeColor").style.color = "blue";
+        }
+  </script>
+</body>
+
+  </body>
+</html>

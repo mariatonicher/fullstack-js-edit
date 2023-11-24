@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+<body>
+  <ul id="lista">
+    <li onclick="removeText(this)">Coffee</li>
+    <li onclick="removeText(this)">Tea</li>
+    <li onclick="removeText(this)">Milk</li>
+  </ul>
+
+  <script>
+    function removeText(element) {
+      element.parentNode.removeChild(element);
+    }
+  </script>
+</body>
+
+  </body>
+</html>
