@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="lista"></ul>
+    <script>
+      const resp = fetch("https://random-data-api.com/api/v2/users?size=10") //fetch do api
+        .then((data) => data.json()) //percorrer a lista, usar o (foreach)
+        .then((data) => {
+          const ulElem = document.getElementById("lista");
+          data.forEach((user) => {
+            //percorrer a lista, usar o (foreach) e criar ul li
+            const liElem = document.createElement("li");
+            const textNode = document.createTextNode(user.first_name);
+            liElem.appendChild(textNode);
+            ulElem.appendChild(liElem); //colocar li dentro da ul
+          });
+        });
+    </script>
+  </body>
+</html>
